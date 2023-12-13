@@ -3,6 +3,10 @@
 import os
 import sys
 
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'utkarsh_sinha.settings')
+application = get_wsgi_application()
 
 def main():
     """Run administrative tasks."""
@@ -20,3 +24,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
